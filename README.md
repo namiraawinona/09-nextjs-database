@@ -25,3 +25,17 @@ Beberapa poin teknis yang saya pahami:
 1. **Fungsi Script:** Saya menambahkan perintah `"seed"` di `package.json` yang berfungsi mengeksekusi file `seed.js` menggunakan Node.js.
 2. **Penggunaan dotenv:** Terdapat *flag* `-r dotenv/config` pada perintah tersebut. Ini sangat penting agar *script* Node.js dapat membaca "kunci rahasia" koneksi database yang ada di dalam file `.env` lokal sebelum mengeksekusi *query*.
 3. **Troubleshooting & Otomatisasi:** Saya belajar mengatasi kendala path file (`./data.js`). Setelah diperbaiki, *script* `seed.js` berhasil menggunakan sintaks SQL untuk membuat struktur tabel secara berurutan dan mengisinya dengan data *dummy* secara otomatis.
+## Soal 4
+
+**Query  (Sesuai Modul):**
+![Soal 4 - Query ](screenshoot/Soal4.png)
+
+
+
+**Apa yang telah saya pelajari:**
+Pada tahap akhir ini, saya belajar cara menjelajahi dan memanipulasi data (*Explore Data*) secara langsung dari *dashboard* basis data menggunakan sintaks SQL.
+
+1. **Eksekusi Query Relasional:** Pada *query* pertama, saya mengeksekusi perintah `JOIN` untuk menggabungkan tabel `invoices` dan `customers`. Ini memungkinkan saya menampilkan nama pelanggan berdasarkan ID mereka yang tercatat di tabel tagihan dengan kondisi jumlah spesifik (`amount = 666`).
+2. **Eksplorasi Mandiri:** Pada *query* kreasi sendiri, saya menggunakan perintah `SELECT name, email FROM customers ORDER BY name ASC` untuk mengambil data spesifik (nama dan email) dari tabel pelanggan dan mengurutkannya secara alfabetis. 
+
+Langkah ini membuktikan bahwa data hasil *seeding* sebelumnya sudah masuk ke dalam sistem basis data dan siap ditarik serta dikelola oleh aplikasi Next.js.
