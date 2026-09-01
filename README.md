@@ -15,3 +15,13 @@ Beberapa poin penting yang saya pelajari meliputi:
 1. **Penyimpanan Kredensial:** Kredensial koneksi database tidak boleh ditulis langsung di dalam kode. Saya menggunakan fitur *Copy Snippet* dari Vercel dan meletakkannya di dalam file `.env` lokal.
 2. **Keamanan dengan `.gitignore`:** Saya memastikan file `.env` masuk ke dalam `.gitignore` agar informasi sensitif seperti URL dan *password* database tidak ikut ter-*push* dan terekspos secara publik di GitHub.
 3. **Instalasi SDK:** Saya menginstal paket penghubung via terminal (`@vercel/postgres`) agar aplikasi Next.js dapat berinteraksi langsung dengan basis data menggunakan *query* SQL.
+## Soal 3
+![Soal 3](screenshoot/Soal3.png)
+
+**Apa yang telah saya pelajari:**
+Pada langkah ini, saya mempelajari konsep *Database Seeding*, yaitu proses mengisi basis data yang masih kosong dengan sekumpulan data awal untuk keperluan pengembangan dan pengujian.
+
+Beberapa poin teknis yang saya pahami:
+1. **Fungsi Script:** Saya menambahkan perintah `"seed"` di `package.json` yang berfungsi mengeksekusi file `seed.js` menggunakan Node.js.
+2. **Penggunaan dotenv:** Terdapat *flag* `-r dotenv/config` pada perintah tersebut. Ini sangat penting agar *script* Node.js dapat membaca "kunci rahasia" koneksi database yang ada di dalam file `.env` lokal sebelum mengeksekusi *query*.
+3. **Troubleshooting & Otomatisasi:** Saya belajar mengatasi kendala path file (`./data.js`). Setelah diperbaiki, *script* `seed.js` berhasil menggunakan sintaks SQL untuk membuat struktur tabel secara berurutan dan mengisinya dengan data *dummy* secara otomatis.
