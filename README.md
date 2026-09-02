@@ -39,3 +39,12 @@ Pada tahap akhir ini, saya belajar cara menjelajahi dan memanipulasi data (*Expl
 2. **Eksplorasi Mandiri:** Pada *query* kreasi sendiri, saya menggunakan perintah `SELECT name, email FROM customers ORDER BY name ASC` untuk mengambil data spesifik (nama dan email) dari tabel pelanggan dan mengurutkannya secara alfabetis. 
 
 Langkah ini membuktikan bahwa data hasil *seeding* sebelumnya sudah masuk ke dalam sistem basis data dan siap ditarik serta dikelola oleh aplikasi Next.js.
+## Soal 5
+![Soal 5](screenshoot/Soal5.png)
+
+**Link Deployment:** https://09-nextjs-database-beta.vercel.app/
+
+**Apa yang telah saya pelajari:**
+Pada tahap ini, saya mempelajari praktik terbaik dalam menyusun struktur komponen antarmuka (UI) di Next.js dengan pendekatan Atomic Design (memisahkan komponen menjadi `atoms` dan `molecules`). 
+
+Saya juga menyiapkan *file* model (`query.tsx`) yang memanfaatkan Vercel Postgres SDK untuk menarik data langsung dari *database* menggunakan SQL. Komponen utama pada halaman `page.tsx` saat ini sengaja dinonaktifkan (*commented out*) untuk memastikan proses *deployment* awal ke Vercel berjalan lancar tanpa *error* karena ketergantungan data.
