@@ -55,3 +55,8 @@ Saya juga menyiapkan *file* model (`query.tsx`) yang memanfaatkan Vercel Postgre
 Pada tahap ini, saya mengaktifkan komponen `<RevenueChart />` untuk melakukan *fetching data* pendapatan (*revenue*) secara langsung menggunakan React Server Components. 
 
 Saya juga menemukan dan memperbaiki sebuah *visual bug*. Grafik bulan Desember (Dec) awalnya terlempar ke baris baru karena pengaturan `sm:grid-cols-13` tidak dikenali oleh konfigurasi standar Tailwind CSS (yang hanya mendukung maksimal 12 kolom). Saya memecahkan masalah ini dengan memodifikasi file `tailwind.config.ts` dan menambahkan *custom utility* `gridTemplateColumns: { '13': 'repeat(13, minmax(0, 1fr))' }`. Setelah perbaikan diterapkan, keseluruhan 12 bulan dan label sumbu-Y berhasil ditampilkan dalam 13 kolom sejajar dengan sempurna.
+## Soal 7
+![Soal 7](screenshoot/Soal7.png)
+
+**Apa yang telah saya pelajari:**
+Pada tahap ini, saya mengaktifkan komponen `<LatestInvoices />` untuk menampilkan 5 data tagihan terbaru. Saya belajar bahwa untuk mengoptimalkan kinerja aplikasi, pengambilan data yang spesifik lebih efisien dilakukan langsung melalui *query* SQL di *database* (misalnya menggunakan perintah `ORDER BY invoices.date DESC LIMIT 5`) dibandingkan menarik seluruh data dan menyortirnya menggunakan JavaScript di sisi aplikasi. Selain itu, saya juga memahami perlunya melengkapi aset statis di folder `public/` agar elemen visual seperti gambar profil dapat dirender dengan sempurna.
