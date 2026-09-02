@@ -48,3 +48,10 @@ Langkah ini membuktikan bahwa data hasil *seeding* sebelumnya sudah masuk ke dal
 Pada tahap ini, saya mempelajari praktik terbaik dalam menyusun struktur komponen antarmuka (UI) di Next.js dengan pendekatan Atomic Design (memisahkan komponen menjadi `atoms` dan `molecules`). 
 
 Saya juga menyiapkan *file* model (`query.tsx`) yang memanfaatkan Vercel Postgres SDK untuk menarik data langsung dari *database* menggunakan SQL. Komponen utama pada halaman `page.tsx` saat ini sengaja dinonaktifkan (*commented out*) untuk memastikan proses *deployment* awal ke Vercel berjalan lancar tanpa *error* karena ketergantungan data.
+## Soal 6
+![Soal 6](screenshoot/Soal   6.png)
+
+**Apa yang telah saya pelajari:**
+Pada tahap ini, saya mengaktifkan komponen `<RevenueChart />` untuk melakukan *fetching data* pendapatan (*revenue*) secara langsung menggunakan React Server Components. 
+
+Saya juga menemukan dan memperbaiki sebuah *visual bug*. Grafik bulan Desember (Dec) awalnya terlempar ke baris baru karena pengaturan `sm:grid-cols-13` tidak dikenali oleh konfigurasi standar Tailwind CSS (yang hanya mendukung maksimal 12 kolom). Saya memecahkan masalah ini dengan memodifikasi file `tailwind.config.ts` dan menambahkan *custom utility* `gridTemplateColumns: { '13': 'repeat(13, minmax(0, 1fr))' }`. Setelah perbaikan diterapkan, keseluruhan 12 bulan dan label sumbu-Y berhasil ditampilkan dalam 13 kolom sejajar dengan sempurna.
