@@ -11,15 +11,20 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@types/bcryptjs": "^2.4.6",
     "@vercel/postgres": "^0.10.0",
     "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "dotenv": "^17.4.2",
     "next": "14.2.3",
+    "next-auth": "^5.0.0-beta.32",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
